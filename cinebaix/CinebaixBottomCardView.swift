@@ -12,12 +12,15 @@ struct CinebaixBottomCardView<Content: View>: View {
     @Binding var cardDismissal: Bool
     let content: Content
     let height: CGFloat
-
-    init(height: CGFloat,
+    let image: String
+    
+    init(image: String,
+         height: CGFloat,
          cardShown: Binding<Bool>,
          cardDismissal: Binding<Bool>,
          @ViewBuilder content: () -> Content) {
 
+        self.image = image
         self.height = height
         _cardShown = cardShown
         _cardDismissal = cardDismissal
@@ -65,7 +68,7 @@ struct CinebaixBottomCardView<Content: View>: View {
                     Spacer()
                 }
                 .frame(height: height)
-                .background(Color.white)
+                .background(.white.opacity(0.8))
                 .offset(y: cardDismissal && cardShown ? 0 : height)
                 .animation(.default)
 

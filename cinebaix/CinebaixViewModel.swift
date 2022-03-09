@@ -21,7 +21,7 @@ final class CinebaixViewModel: ObservableObject {
                     self.movies = movies
                     self.loading = false
 
-                case .failure(let err):
+                case .failure(_):
                     break
                 }
             }
