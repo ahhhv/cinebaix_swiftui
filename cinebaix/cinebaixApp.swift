@@ -2,7 +2,7 @@
 //  cinebaixApp.swift
 //  cinebaix
 //
-//  Created by Alex Hernandez Velasco on 30/10/21.
+//  Created by Alex on 30/10/21.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct cinebaixApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
