@@ -28,12 +28,14 @@ struct CardContentView: View {
                         .bold()
                         .font(.title)
                         .lineLimit(.none)
+                        .padding()
 
 
                     Text("\(Classification[selectedMovie?.classification ?? ""] ?? "N/A")")
                         .font(.title3)
                         .italic()
-                    Text("Durada: \(selectedMovie?.duration ?? "") minuts")
+                    let duration = Int(selectedMovie?.duration ?? "0") ?? 0
+                    Text("Durada: \(getTime(minutes: duration))")
                     Text("Classificació: \(selectedMovie?.rating ?? "N/A")")
                         .padding(.bottom, 10)
 
@@ -56,10 +58,11 @@ struct CardContentView: View {
         }
     }
 
-    func getTime(minutes: Int) {
+    func getTime(minutes: Int) -> String {
+        let time = minutes * 60
+        let hours = time / 3600
+        let minutes = (time / 60) % 60
 
-//        let components = Calendar.current.dateComponents([.hour, .minute], from: someDate)
-//        let hour = components.hour ?? 0
-//        let minute = components.minute ?? 0
+        return String(format: "%0.1d:%0.2d", hours, minutes)
     }
 }

@@ -61,14 +61,12 @@ struct CinebaixBottomCardView<Content: View>: View {
 
                     }
 
-                    Spacer()
-
                     content
 
                     Spacer()
                 }
                 .frame(height: height)
-                .background(.white.opacity(0.8))
+                .background(.white)
                 .offset(y: cardDismissal && cardShown ? 0 : height)
                 .animation(.default)
 
