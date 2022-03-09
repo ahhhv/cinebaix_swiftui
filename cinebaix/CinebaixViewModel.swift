@@ -22,7 +22,6 @@ final class CinebaixViewModel: ObservableObject {
                     self.loading = false
 
                 case .failure(let err):
-                    print("MUEEEEEEC", err)
                     break
                 }
             }
