@@ -2,7 +2,7 @@
 //  CinebaixBottomCardView.swift
 //  cinebaix
 //
-//  Created by Alex Hernandez Velasco on 20/11/21.
+//  Created by Alex on 20/11/21.
 //
 
 import SwiftUI

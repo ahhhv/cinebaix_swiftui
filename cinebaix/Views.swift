@@ -2,7 +2,7 @@
 //  Views.swift
 //  cinebaix
 //
-//  Created by Alex Hernandez Velasco on 9/3/22.
+//  Created by Alex on 9/3/22.
 //
 
 import SwiftUI
